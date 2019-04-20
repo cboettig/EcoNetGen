@@ -41,7 +41,7 @@ current development version of `EcoNetGen` from GitHub with:
 devtools::install_github("cboettig/EcoNetGen")
 ```
 
-This way requires you have a recent FORTRAN compiler avialble on your
+This way requires you have a recent FORTRAN compiler available on your
 machine.
 
 ## Randomly generate networks
