@@ -1,5 +1,5 @@
 Package: EcoNetGen
-Version: 0.2.2
+Version: 0.2.3
 Title: Simulate and Sample from Ecological Interaction Networks
 Description: Randomly generate a wide range of interaction networks with
              specified size, average degree, modularity, and topological

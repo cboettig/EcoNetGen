@@ -1,3 +1,7 @@
+# NetGen 0.2.3
+
+* Patch a bug in fortran routine that could cause generated scalefree networks to have potentially larger average degree than targeted.
+
 # NetGen 0.2.2
 
 * Avoid potential crashes from FORTRAN code by intercepting any

@@ -284,7 +284,7 @@ IMPLICIT double precision(A-H,O-Z)
 INTEGER, ALLOCATABLE ::  co(:),sco(:),id(:),b(:,:)
 INTEGER sm
 modsize = modtot - ini
-m = int(avk)
+m = int(avk/2.0)
 m0 = m+1
 ALLOCATE (b(modsize,modsize))
 ALLOCATE (co(modsize),sco(modsize),id(m))
@@ -361,7 +361,7 @@ IMPLICIT double precision(A-H,O-Z)
 double precision alpha
 ifin = modtot
 modsize = ifin-ini
-alpha = log(1.0D0+1.0D0/avk)  ! populate module
+alpha = log(1.0D0+2.0D0/avk)  ! populate module
 do i=1,modsize
   n1 = int(modsize*exp(-alpha*(i-1)))
   do j=i+1,n1
