@@ -1,9 +1,10 @@
+#define USE_FC_LEN_T
+#include <Rconfig.h>
+
 #include <R.h>
 #include <R_ext/Rdynload.h>
 #include <Rversion.h>
 
-#define USE_FC_LEN_T
-#include <Rconfig.h>
 
 void F77_SUB(rndstart)(void) { GetRNGstate(); }
 void F77_SUB(rndend)(void) { PutRNGstate(); }
