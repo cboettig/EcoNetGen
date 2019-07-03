@@ -29,7 +29,7 @@ knitr::opts_chunk$set(
 specified size, average degree, modularity, and topological
 structure. You can also sample nodes and links from within simulated networks
 randomly, by degree, by module, or by abundance. Simulations
-and sampling routines are implemented in 'FORTRAN', providing
+and sampling routines are implemented in FORTRAN, providing
 efficient generation times even for large networks. Basic
 visualization methods also included. Algorithms implemented
 here are described in de Aguiar et al. (2017) [arXiv:1708.01242](https://arxiv.org/abs/1708.01242).
@@ -50,11 +50,11 @@ See [NEWS](NEWS.md) for a list of the most recent changes to the development ver
 devtools::install_github("cboettig/EcoNetGen")
 ```
 
-This way requires you have a recent FORTRAN compiler avialble on your machine. 
+This way requires you have a recent FORTRAN compiler available on your machine. 
 
 ## Randomly generate networks
 
-This is a basic example which generates a network. See `?netgen` for documentation describing the parameter arguments.  Setting `verbose = FALSE` (default) surpresses the output summary message.
+This is a basic example which generates a network. See `?netgen` for documentation describing the parameter arguments.  Setting `verbose = FALSE` (default) suppresses the output summary message.
 
 ```{r example, message=TRUE}
 library(EcoNetGen)
@@ -137,7 +137,7 @@ ggraph(subnet, layout = 'graphopt') +
 ## A few example statistics
 
 
-And we can compute common statistics from igraph as well.  Here we confirm that clustering by "edge betweeness" gives us the expected number of modules:
+And we can compute common statistics from `igraph` as well.  Here we confirm that clustering by "edge betweeness" gives us the expected number of modules:
 
 ```{r}
 community <- cluster_edge_betweenness(as.undirected(network))

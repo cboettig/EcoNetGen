@@ -18,10 +18,10 @@ Status](https://img.shields.io/codecov/c/github/cboettig/EcoNetGen/master.svg)](
 networks with specified size, average degree, modularity, and
 topological structure. You can also sample nodes and links from within
 simulated networks randomly, by degree, by module, or by abundance.
-Simulations and sampling routines are implemented in ‘FORTRAN’,
-providing efficient generation times even for large networks. Basic
-visualization methods also included. Algorithms implemented here are
-described in de Aguiar et al. (2017)
+Simulations and sampling routines are implemented in FORTRAN, providing
+efficient generation times even for large networks. Basic visualization
+methods also included. Algorithms implemented here are described in de
+Aguiar et al. (2017)
 [arXiv:1708.01242](https://arxiv.org/abs/1708.01242).
 
 ## Installation
@@ -48,7 +48,7 @@ machine.
 
 This is a basic example which generates a network. See `?netgen` for
 documentation describing the parameter arguments. Setting `verbose =
-FALSE` (default) surpresses the output summary message.
+FALSE` (default) suppresses the output summary message.
 
 ``` r
 library(EcoNetGen)
@@ -64,7 +64,7 @@ network <- netgen(net_size = 150,
                   ) 
 #> 
 #> module count = 8 
-#> average degree = 6.08 
+#> average degree = 6.10666666666667 
 #> average module size = 18.75 
 #> number of components = 1 
 #> size of largest component = 150
@@ -151,14 +151,14 @@ ggraph(subnet, layout = 'graphopt') +
 
 ## A few example statistics
 
-And we can compute common statistics from igraph as well. Here we
+And we can compute common statistics from `igraph` as well. Here we
 confirm that clustering by “edge betweeness” gives us the expected
 number of modules:
 
 ``` r
 community <- cluster_edge_betweenness(as.undirected(network))
 length(groups(community))
-#> [1] 9
+#> [1] 8
 ```
 
 We can check the size of each module as well:
@@ -167,15 +167,15 @@ We can check the size of each module as well:
 module_sizes <- sizes(community)
 module_sizes
 #> Community sizes
-#>  1  2  3  4  5  6  7  8  9 
-#> 18 19 31 19 22  7  3 20 11
+#>  1  2  3  4  5  6  7  8 
+#> 18 18 19 22 19 32 11 11
 ```
 
 Average degree:
 
 ``` r
 mean(degree(as.undirected(network)))
-#> [1] 6.08
+#> [1] 6.12
 ```
 
 We can also label and plot the cluster membership:

@@ -6,9 +6,9 @@ void F77_SUB(rndstart)(void) { GetRNGstate(); }
 void F77_SUB(rndend)(void) { PutRNGstate(); }
 double F77_SUB(unifrnd)(void) { return unif_rand(); }
 
-void F77_SUB(subnetgen)(int *, int *, int *, int *,float *, float *, float *, int *);
+void F77_SUB(subnetgen)(int *, int *, int *, int *,double *, double *, double *, int *);
 void F77_SUB(clusters)(int *, int *, int *, int *);
-void F77_SUB(subsampling)(int *, int *, int *, int *, float *,
+void F77_SUB(subsampling)(int *, int *, int *, int *, double *,
                           int *, int *, int *, int *, int *, int *, int *);
 
 static R_FortranMethodDef R_FortranDef[] = {

@@ -45,7 +45,7 @@ criterion.  For each key node, the requested number or fraction of neighbors is
 then sampled according to the \code{neighbors_sampler} criterion.  Optionally, a list of
 modules can be designated as "hidden" and will be excluded from sampling.
 
-if \code{n_neighbors is greater than 1, assumes this is the number to sample. If}n_neighbors\code{is between 0 and 1, assumes this is the fration of neighbors to sample. (To sample 1 neighbor, use an explicit integer,}1L\code{(or as.}integer(1)`)
+if \code{n_neighbors is greater than 1, assumes this is the number to sample.  If }n_neighbors\code{is between 0 and 1, assumes this is the fration of neighbors to sample.  (To sample 1 neighbor, use an explicit integer,}1L\code{ (or as.}integer(1)`)
 to sample 100% of neighbors, use a numeric, 1.0.
 
 Provide \code{module_sizes} list to improve performance.  If not provided, this will
