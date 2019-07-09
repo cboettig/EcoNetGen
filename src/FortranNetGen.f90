@@ -254,6 +254,7 @@ end subroutine SubNetGen
 SUBROUTINE RANDOMMOD(ini,modtot)
 USE globals
 double precision p
+double precision aux
 iini = ini + 1
 ifin = modtot
 modsize = ifin - ini
