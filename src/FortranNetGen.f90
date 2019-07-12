@@ -27,8 +27,8 @@ double precision, INTENT(IN), DIMENSION(2) :: rewindprobs
 double precision, INTENT(IN), DIMENSION(7) :: mod_probs
 INTEGER, ALLOCATABLE :: degree(:)
 INTEGER, DIMENSION(200) :: modsize_sav
-CHARACTER*20 namenet
-CHARACTER*50 name_network,prop_network,adj_network
+CHARACTER(20) namenet
+CHARACTER(50) name_network,prop_network,adj_network
 double precision p1, p2, p3, p41, p42, p51, p52, prew, prewloc
 double precision pc1, pc2, pc3, pc41, pc42, pc51, pc52, p, an, aux
 namenet = "default"
@@ -253,6 +253,7 @@ end subroutine SubNetGen
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 SUBROUTINE RANDOMMOD(ini,modtot)
 USE globals
+double precision unifrnd
 double precision p
 double precision aux
 iini = ini + 1
